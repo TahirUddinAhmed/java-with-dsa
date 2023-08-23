@@ -14,6 +14,10 @@ public class data_types {
         long largeIntegerNum = 434909829301238L;
         // boolean - either true or false
         boolean bool = true;
+        // byte - can store value from -127 to 127
+        byte a = 127;
+
+
 
 
         // displaying the values of variables
@@ -23,5 +27,6 @@ public class data_types {
         System.out.println(largeDecimalNum);
         System.out.println(largeIntegerNum);
         System.out.println(bool);
+        System.out.println(a);
     }
 }
