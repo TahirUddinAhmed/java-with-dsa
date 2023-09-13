@@ -11,9 +11,12 @@ public class Input {
         }
 
         System.out.println("Marks is listed below: ");
-        for(int i = 0; i < marks.length; i++) {
-            System.out.print(marks[i] + " ");
-        }
+//        for(int i = 0; i < marks.length; i++) {
+//            System.out.print(marks[i] + " ");
+//        }
 
+        for(int num : marks) { // for every element in the array, print the element
+            System.out.print(num + " "); // here num represent element of the array
+        }
     }
 }
