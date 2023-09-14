@@ -10,7 +10,7 @@ public class PassingArr {
 
         // NOTE: Always remember when we pass an array to a function,
         // we are passing the reference of the original array, means that any change made to the functions array effect the original one.
-        
+
     }
     static void modifyArr(int[] arr) {
         arr[0] = 101;
