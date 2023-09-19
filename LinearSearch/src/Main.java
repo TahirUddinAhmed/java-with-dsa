@@ -5,6 +5,8 @@ public class Main {
 
 
         System.out.println(ModifiedLSearch(numbers, 13));
+
+        System.out.println(linearSeach2(numbers, 71));
     }
     // linear search - return the index if item found
     // otherwise - return -1 if it is not found
@@ -20,6 +22,20 @@ public class Main {
         }
 
         return found;
+    }
+
+    // linear search - return true if element found and return false if element not found
+    static boolean linearSeach2(int[] arr, int target) {
+        if(arr.length == 0) {
+            return false;
+        }
+        for(int elements: arr) {
+            if(elements == target) {
+                return true;
+            }
+        }
+        // if none of the return statement is executed - return false
+        return false;
     }
 
     // modified linearsearch function
