@@ -7,6 +7,7 @@ public class CountEvenDigits {
         int countevent = countEvenDigit(nums);
 
         System.out.println(countevent);
+        System.out.println(digits(-5762));
     }
 
     static int countEvenDigit(int[] arr) {
@@ -32,6 +33,10 @@ public class CountEvenDigits {
 
     static int digits(int num) {
         int count = 0;
+
+        if(num < 0) {
+            num = num * -1; // -5123 * -1 = 5123
+        }
 
         while (num > 0) {
             count++;
