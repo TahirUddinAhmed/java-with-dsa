@@ -9,13 +9,14 @@ public class CeilingOfNum {
     }
 
     // return the index value
+    // find the smallest element which is greater then or equal to target
     static int arrCeil(int[] arr, int target) {
+        // if the target element > then the largest element - return -1
+        if(target > arr[arr.length -1]) {
+            return -1;
+        }
         int s = 0;
         int e = arr.length - 1;
-
-        if(target <= e) {
-
-
             boolean isAsc = arr[s] < arr[e];
 
             while (s <= e) {
@@ -45,8 +46,5 @@ public class CeilingOfNum {
             }
 
             return s; // if while loop condition break return the start element
-        }
-
-        return -1;
     }
 }

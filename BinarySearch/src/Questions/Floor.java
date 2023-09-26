@@ -10,11 +10,12 @@ public class Floor {
 
     // return the index value
     static int arrFloor(int[] arr, int target) {
+
+        if(target < arr[0]) {
+            return -1;
+        }
         int s = 0;
         int e = arr.length - 1;
-
-
-        if(target >= arr[s]) {
             boolean isAsc = arr[s] < arr[e];
 
             while (s <= e) {
@@ -44,10 +45,5 @@ public class Floor {
             }
 
             return e; // if while loop condition break return the start element
-        }
-
-
-
-      return -1;
     }
 }
