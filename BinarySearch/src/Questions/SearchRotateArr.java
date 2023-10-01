@@ -3,13 +3,22 @@ package Questions;
 public class SearchRotateArr {
     public static void main(String[] args) {
         int[] nums = {4, 5, 6,7, 8, 0, 1, 2};
-        int target = 0;
+//        int[] nums = {2, 4, 5, 7, 9, 10, 12};
+        int target = 7;
         int ans = search(nums, target);
         System.out.println(ans);
     }
 
     static int search(int arr[], int target) {
         int pivot = findPivot(arr);
+
+        // if you didn't find a pivot, it means the array is not rotated
+        if(pivot == -1) {
+            // just do normal binary search
+            return binarySearch(arr, target, 0, arr.length - 1);
+        }
+
+
         int firstHalf = binarySearch(arr, target, 0, pivot);
         if(firstHalf != -1) {
             return firstHalf;
@@ -27,10 +36,15 @@ public class SearchRotateArr {
             // find the mid element
             int mid = start + (end - start) / 2;
 
-            if(arr[mid] > arr[mid + 1]) {
+            if(mid < end && arr[mid] > arr[mid + 1]) {
                 // found pivot
                 return mid;
-            } else if(arr[start] >= arr[mid]) {
+            }
+            if(mid > start && arr[mid] < arr[mid - 1]) {
+                return mid - 1;
+            }
+
+            if(arr[start] >= arr[mid]) {
                 // it means pivot doesn't lie on the right side, because elements are distinct
                 // we need to search pivot on the left side
                 end = mid - 1;
