@@ -28,6 +28,7 @@ public class SearchRotateArr {
     }
 
     // arr = [4, 5, 6,7 0, 1, 2]
+    // this is not work for duplicate values
     static int findPivot(int[] arr) {
         int start = 0;
         int end = arr.length - 1;
