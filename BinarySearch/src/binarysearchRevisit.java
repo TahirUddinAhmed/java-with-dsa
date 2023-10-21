@@ -5,8 +5,11 @@ public class binarysearchRevisit {
         int res = search(nums, 13);
         int res1 = agnosticBS(nums1, 12);
 
+        int floor = floorArr(nums, 11);
+
         System.out.println(res);
         System.out.println(res1);
+        System.out.println(floor);
     }
 
     public static int search(int[] arr, int target) {
@@ -64,5 +67,29 @@ public class binarysearchRevisit {
         }
 
         return -1;
+    }
+
+
+    public static int floorArr(int[] arr, int target) {
+        int start = 0;
+        int end = arr.length - 1;
+
+        while(start <= end) {
+            // find the middle element
+            int mid = start + (end - start) / 2;
+
+            if(arr[mid] > target) {
+                end = mid - 1;
+            } else if(arr[mid] < target) {
+                start = mid + 1;
+            } else {
+                // we got the target
+                return mid;
+            }
+        }
+
+        // if none of the statement return floor will be the end element
+        return end;
+
     }
 }
