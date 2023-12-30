@@ -9,7 +9,11 @@ public class BoxWeight extends Box{
     }
 
     public BoxWeight (double l, double h, double w, double weight) {
+        // invoke base class(Box) constructor
         super(l, h, w); // call the parent class constructor
+
+//        System.out.println("");
+
         // used to initialise values present in parent class
         this.weight = weight;
     }
