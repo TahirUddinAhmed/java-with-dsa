@@ -8,6 +8,11 @@ public class BoxWeight extends Box{
 //        this.l = 2; // can't access private properties
     }
 
+    BoxWeight (BoxWeight other) {
+        super(other);
+        weight = other.weight;
+    }
+
     public BoxWeight (double l, double h, double w, double weight) {
         // invoke base class(Box) constructor
         super(l, h, w); // call the parent class constructor
