@@ -15,3 +15,6 @@ public class Main {
 // Types of polymorphism
 // 1. Compile time/ static polymorphism:
 // this is achieved VIA method overloading.
+
+// 2. Runtime/Dynamic Polymorphism
+// achieved by method overriding.
