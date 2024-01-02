@@ -7,15 +7,15 @@ public class Main {
         Box b2 = new Box(12, 6, 8);
         Box b3 = new Box(cube);
 
-        BoxWeight b4 = new BoxWeight();
-        BoxWeight b5 = new BoxWeight(4, 3, 7, 12);
+//        BoxWeight b4 = new BoxWeight();
+//        BoxWeight b5 = new BoxWeight(4, 3, 7, 12);
 
 //        b4.show();
 //        b5.show();
 //        System.out.println("weight: " + b5.weight);
 
 
-        Box b6 = new BoxWeight(2, 5, 7, 10);
+//        Box b6 = new BoxWeight(2, 5, 7, 10);
 
 //        b6.show();
 //        System.out.println(b6.weight);
@@ -25,8 +25,14 @@ public class Main {
 //        b2.show();
 //        b3.show();
 
-        BoxPrice box = new BoxPrice();
-        System.out.println(box.cost);
+//        BoxPrice box = new BoxPrice();
+//        System.out.println(box.cost);
+//        b.greeting();
+        Box.greeting();
+
+        Box box = new BoxWeight();
+
+        box.greeting();
     }
 }
 

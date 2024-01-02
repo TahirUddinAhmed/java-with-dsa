@@ -1,10 +1,14 @@
 package tahir.com.properties.inheritence;
 
+// whenever you create a class as final, implicitly the class methods are final too
 public class Box {
     private double l;
     double h;
     double w;
 
+    static void greeting() {
+        System.out.println("Hey I am in box class");
+    }
     Box () {
         this.h = -1;
         this.l = -1;

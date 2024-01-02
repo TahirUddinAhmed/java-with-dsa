@@ -3,6 +3,11 @@ package tahir.com.properties.inheritence;
 public class BoxWeight extends Box{
     double weight;
 
+
+    static void greeting() {
+        System.out.println("Hey I am in box weight class");
+    }
+
     public BoxWeight () {
         this.weight = -1;
 //        this.l = 2; // can't access private properties
