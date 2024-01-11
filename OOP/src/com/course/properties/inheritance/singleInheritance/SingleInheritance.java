@@ -1,4 +1,4 @@
-package com.course.properties.inheritance;
+package com.course.properties.inheritance.singleInheritance;
 
 // super class or parent class
 class Vehicle {
